@@ -9,10 +9,22 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleone = {
+var articles = {
+'article-one' : {
     title : "Article One",
     content : " this is article one",
     date : "day one"
+}
+'article-two' : {
+    title : "Article two",
+    content : " this is article two",
+    date : "day two"
+}
+'article-three' : {
+    title : "Article Three",
+    content : " this is article Three",
+    date : "day three"
+}
 };
 
 function CreateTemplate(data) {
@@ -41,8 +53,9 @@ function CreateTemplate(data) {
 
 
 
-app.get('/article-one',function(req,res){
-  res.send(CreateTemplate(articleone));
+app.get('/:articlename',function(req,res){
+  var articlename: res/params.articlename
+  res.send(CreateTemplate(articles(articlename)));
 });
 
 app.get('/article-two',function(req,res){
