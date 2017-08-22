@@ -50,6 +50,9 @@ function CreateTemplate(data) {
     return htmltemplate;
 }
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 
 app.get('/:articlename',function(req,res){
   var articlename: res.params.articlename;
