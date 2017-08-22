@@ -14,12 +14,12 @@ var articles = {
     title : "Article One",
     content : " this is article one",
     date : "day one"
-}
+},
 'article-two' : {
     title : "Article two",
     content : " this is article two",
     date : "day two"
-}
+},
 'article-three' : {
     title : "Article Three",
     content : " this is article Three",
@@ -55,7 +55,6 @@ app.get('/:articlename',function(req,res){
   var articlename: res.params.articlename;
   res.send(CreateTemplate(articles[articlename]));
 });
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
