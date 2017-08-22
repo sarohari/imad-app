@@ -9,8 +9,37 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var articleone = {
+    title : "Article One",
+    content : " this is article one",
+    date : "day one"
+};
+
+function CreateTemplate(data) {
+    var title = data.title;
+    var content = data.content;
+    var date = data.date;
+    
+    var htmltemplate = `
+    <html>
+    <head>
+        <title>${title}</title>
+    </head>
+    <body>
+        <H1>${content}</H1>
+        <p>This is a paragraph</p>
+        <h2>${date}</h2>
+    </body>
+    </html>
+    `
+    return htmltemplate;
+}
+
+
+
+
 app.get('/article-one',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(CreateTemplate(articleone));
 });
 
 app.get('/article-two',function(req,res){
