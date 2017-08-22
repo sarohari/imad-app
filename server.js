@@ -27,9 +27,11 @@ function CreateTemplate(data) {
         <link href="ui/style.css" rel="stylesheet">
     </head>
     <body>
+        <div class='cont1'>
         <H1>${content}</H1>
         <p>This is a paragraph</p>
         <h2>${date}</h2>
+        </div>
     </body>
     </html>
     `
