@@ -52,7 +52,7 @@ function CreateTemplate(data) {
 
 
 app.get('/:articlename',function(req,res){
-  var articlename: res.params.articlename
+  var articlename: res.params.articlename;
   res.send(CreateTemplate(articles[articlename]));
 });
 
