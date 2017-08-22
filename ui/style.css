@@ -20,3 +20,11 @@ body {
     height: 200px;
 }
 
+
+.cont1 {
+    max-width :800px;
+    margin: 0 auto;
+    color: Blue;
+    Font-family: sans-serif;
+}
+
