@@ -6,8 +6,15 @@ element.innerHTML = "hi to all";
 
 var img = document.getElementById("dino");
 
+var marginleft = 100;
+
+function moveRight(){
+marginleft = marginleft + 10 ;
+img.style.marginLeft = marginleft + 'px';
+};
+
 img.onclick = function () {
-    img.style.marginLeft = "100px";
+set.interval(moveRight,100);
 };
 
 
