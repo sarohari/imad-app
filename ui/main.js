@@ -9,7 +9,7 @@ var img = document.getElementById("dino");
 var marginleft = 100;
 
 function moveRight(){
-marginleft = marginleft + 5 ;
+marginleft = marginleft + 1 ;
 img.style.marginLeft = marginleft + 'px';
 };
 
